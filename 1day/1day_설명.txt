@@ -1,0 +1,23 @@
+1. (base) : 아나콘다가 관리하는 대표 가상환경(가상공간)
+            : 이곳에는 라이브러리 설치를 하지 않습니다.
+2. 새로운 가상환경 생성하여 진행합니다.  
+  - 우리가 별도고 생성할 가상환경은 (base) 가상공간에서 수행
+   > conda list
+
+   - 아나콘다 명령어 : conda라는 이름으로 명령을 시작합니다.
+    -- conda ver, python ver
+       > conda --version // python --version
+
+   - 아나콘다에 생성된 가상환경(env) 목록 확인하기
+     > conda env list
+   
+   - 주피터 노트북 프로그램 에디터 열기
+    > jupyter notebook
+
+   - (base) 가상공간과 웹브라우저 주피터 노트북 에디터와 연결하기 위해서는 커널(kernel) 연결을 통해서 
+               파일을 생성해야 가상공간의 라이브러리를 사용할 수 있습니다.
+                (base 공간은 -> python3 커널을 통해서 연결되어 있음)
+
+* 아나콘다가 관리하는 경로 C:\Users\Administrator>
+* c 로컬 디스크 사용자 admin (anaconda3 = 관리자 폴더)
+                                         (bk_202503 = 우리가 사용할 작업 폴더)

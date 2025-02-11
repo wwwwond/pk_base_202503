@@ -1,0 +1,47 @@
+1. 새로운 가상ㅎ환경 생성하기 (폴더 위치 무관)
+ - Anaconda Prompt의 (base) 가상환경에서 실행해야 합니다.
+ - 설치를 위한 라이브러리 업그레이드 (가끔 한번씩 수행)
+ ** 라이브러리 설치 명령어 
+
+   -- conda 라이브러리 업그레이드
+     > conda update -n base conda
+
+   -- pip 라이브러리 업그레이드 
+     > python -m pip install -- upgrade pip
+
+ - 가상환경 생성 : 가상환경 이름은 bk_base_202503
+  -- conda create -n 가상환경 이름 python=파이썬버전
+  > conda create -n bk_base_202503 Python=3.9
+
+ - 가상환경 잘 만들어졌는지 확인하기 : 가상환경 목록 리스트 확인하면 됩니다. 
+  --> 생성된 위치 : C:\Users\Administrator\anaconda3\envs\bk_base_202503
+  > conda env list
+
+- 가상환경 제거하기 
+    > conda remove -n bk_base_202503 --all
+
+2. 새로운 가상환경에 라이브러리(package) 설치하기 
+ - 최초에 한번 pip 업그레이드 합니다. 
+  > python -m pip install --upgrade pip
+
+- 커널 생성하기 
+  -- 각 가상환경이 만들어 질 때마다 , 커널을 만들어야 합니다.
+  -- 커널을 생성하기 위해서는 주피터 및 노트북 라이브러리가 필요합니다.
+
+  -- 주피터 및 노트북 라이브러리 설치하기 
+    > pip install jupyter notebook
+ 
+ -- 커널 생성 
+   > python -m ipykernel install -- user --name bk_base_202503 -- display-name bk_base_202503_kernel
+   > 
+-- 생성된 커널 확인하기 : 커널 목록 확인 
+ > jupyter kernelspec list
+
+-- 커널 삭제 : 가상환경을 삭제할 경우에는 커널도 함께 삭제해야 합니다. 
+ -- 삭제순서 : 커널 삭제 > 가상환경 삭제   
+> jupyter kernelspec uninstall bk_base_202503
+
+
+
+
+
